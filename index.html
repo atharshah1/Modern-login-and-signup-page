@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login/signup page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="glass_effect_container" id="glass_container">
+        <div class="logo" id="logo">
+          <img src="logo.jpg" alt="@bliss_dev_" />
+        </div>
+        <div class="signin" id="signin">
+          <div class="signin_container">
+            <div class="username_input">
+              <input
+                type="text"
+                name="email"
+                id="username"
+                required
+                pattern="^\s?(?=\S).*"
+              />
+              <label for="email">
+                <span class="email__username">E-mail</span></label
+              >
+            </div>
+            <div class="password_input">
+              <input type="password" name="password" id="password" required />
+              <label for="password">
+                <span class="password">password</span></label
+              >
+            </div>
+            <button class="button" type="submit">
+              <span class="button__text">Login</span>
+              <!-- Arrow svg inside button-->
+              <svg
+                class="button__arrow"
+                width="24"
+                height="8"
+                viewBox="0 0 24 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M20.1716 0.46444L23.3536 3.64642C23.5488 3.84168 23.5488 4.15826 23.3536 4.35353L20.1716 7.53551C19.9763 7.73077 19.6597 7.73077 19.4645 7.53551C19.2692 7.34025 19.2692 7.02366 19.4645 6.8284L21.7929 4.49997H0L0 3.49997H21.7929L19.4645 1.17155C19.2692 0.976284 19.2692 0.659702 19.4645 0.46444C19.6597 0.269178 19.9763 0.269178 20.1716 0.46444Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="signup_page_link">
+            Don't have an account?
+            <a class="go_to_signup_page" onclick="rotate()" href="#">Sign up</a
+            >.
+          </div>
+        </div>
+        <div class="signup" id="signup">
+          <div class="signup_container">
+            <div class="username_input">
+              <input
+                type="text"
+                name="name"
+                id="username_register"
+                required
+                pattern="^\s?(?=\S).*"
+              />
+              <label for="name">
+                <span class="email__username">Enter your full name</span>
+              </label>
+            </div>
+            <div class="email_input">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                pattern="^\s?(?=\S).*"
+              />
+              <label for="email">
+                <span class="email__username">Enter your Email</span>
+              </label>
+            </div>
+            <div class="password_input">
+              <input type="password" name="password" id="password" required />
+              <label for="password">
+                <span class="password">password</span></label
+              >
+            </div>
+            <button class="button button2" type="submit">
+              <span class="button__text">Sign up</span>
+              <!-- arrow svg for button -->
+              <svg
+                class="button__arrow"
+                width="24"
+                height="8"
+                viewBox="0 0 24 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M20.1716 0.46444L23.3536 3.64642C23.5488 3.84168 23.5488 4.15826 23.3536 4.35353L20.1716 7.53551C19.9763 7.73077 19.6597 7.73077 19.4645 7.53551C19.2692 7.34025 19.2692 7.02366 19.4645 6.8284L21.7929 4.49997H0L0 3.49997H21.7929L19.4645 1.17155C19.2692 0.976284 19.2692 0.659702 19.4645 0.46444C19.6597 0.269178 19.9763 0.269178 20.1716 0.46444Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="signin_page_link">
+            Already have an account?
+            <a class="go_to_signin_page" onclick="rotate()" href="#">Sign in</a
+            >.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- wave svgs -->
+    <!-- Wave svg 1 -->
+    <svg
+      class="wave1"
+      viewBox="0 0 1353 377"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0 377L48 341.095C96 305.19 192 233.381 288 170.548C384 107.714 480 53.8571 576 53.8571C672 53.8571 768 107.714 864 125.667C960 143.619 1056 125.667 1152 98.7381C1248 71.8095 1344 35.9048 1392 17.9524L1440 0V377H1392C1344 377 1248 377 1152 377C1056 377 960 377 864 377C768 377 672 377 576 377C480 377 384 377 288 377C192 377 96 377 48 377H0Z"
+        fill="#0099FF"
+      />
+    </svg>
+    <!-- wave Svg 2 -->
+    <svg
+      class="wave2"
+      viewBox="0 0 1440 356"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g filter="url(#filter0_d)">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M0 32L60 38C120 44 240 56 360 104C480 152 600 207.5 720 219.5C840 231.5 960 200 1080 194C1200 188 1320 236 1380 260L1440 284V356H1380C1320 356 1200 356 1080 356C960 356 840 356 720 356C600 356 480 356 360 356C240 356 120 356 60 356H0V32Z"
+          fill="#0099FF"
+        />
+      </g>
+      <defs>
+        <filter
+          id="filter0_d"
+          x="-24"
+          y="0"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          />
+          <feOffset dy="-8" />
+          <feGaussianBlur stdDeviation="12" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.47 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow"
+            result="shape"
+          />
+        </filter>
+      </defs>
+    </svg>
+    <!-- javascript for flipping the container -->
+    <script>
+      function rotate() {
+        if (
+          !document
+            .getElementById("glass_container")
+            .classList.contains("signin_rotate")
+        ) {
+          document
+            .getElementById("glass_container")
+            .classList.remove("signup_rotate");
+          document
+            .getElementById("glass_container")
+            .classList.add("signin_rotate");
+          document.getElementById("logo").classList.toggle("logo_r");
+          document.getElementById("signin").style.display = "none";
+          document.getElementById("signup").style.display = "flex";
+        } else {
+          document
+            .getElementById("glass_container")
+            .classList.remove("signin_rotate");
+          document
+            .getElementById("glass_container")
+            .classList.add("signup_rotate");
+          document.getElementById("logo").style.transform = "rotateY(0deg)";
+          document.getElementById("signup").style.display = "none";
+          document.getElementById("signin").style.display = "flex";
+        }
+      }
+    </script>
+  </body>
+</html>

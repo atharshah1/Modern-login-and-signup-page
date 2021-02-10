@@ -1,0 +1,252 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, #6f6d6d, #232323, #000000);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.container {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.glass_effect_container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(
+    10px
+  ); /* Note: backdrop-filter doesn't support mozilla firefox */
+}
+/* for making kind of glass effect in mozilla firefox*/
+.glass_effect_container::before {
+  position: absolute;
+  content: "";
+  width: 400px;
+  height: 500px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.3);
+  filter: blur(100em);
+}
+/*rotate back logo image to its original */
+.logo_r {
+  transition: transform 1ms;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  position: relative;
+}
+.logo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  filter: contrast(100%);
+}
+/*Sign in page styles*/
+.signin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 65%;
+  width: 100%;
+}
+.signin_container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  color: #555454;
+  height: 80%;
+  width: 80%;
+
+  border-bottom: #000 1px solid;
+}
+.username_input {
+  height: 30px;
+  margin: 20px 0px 30px 0px;
+}
+/*styling for all the lable tags*/
+label {
+  position: absolute;
+  width: 100%;
+  font-size: 18px;
+  left: 7px;
+  pointer-events: none;
+  transform: translateY(-5px);
+}
+/*styling for all input tags*/
+input {
+  outline: none;
+  background: transparent;
+  border: none;
+  width: 230px;
+  border-bottom: #000 1px solid;
+  box-shadow: none;
+}
+.username_input input:focus + label .email__username,
+.username_input input:valid + label .email__username {
+  position: absolute;
+  font-size: 14px;
+  left: 0px;
+  color: #000;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+.username_input input:focus,
+.username_input input:valid {
+  border-bottom: #fff 1px solid;
+}
+.password_input {
+  margin-bottom: 40px;
+}
+.password_input input:focus + label .password,
+.password_input input:valid + label .password {
+  position: absolute;
+  font-size: 14px;
+  left: 0px;
+  color: #000;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+.password_input input:focus,
+.password_input input:valid {
+  border-bottom: rgb(255, 255, 255) 1px solid;
+}
+
+.button {
+  height: 40px;
+  width: 150px;
+  border: #000 1px solid;
+  box-shadow: none;
+  border-radius: 100px;
+  background: rgba(253, 247, 247, 0.38);
+  outline: none;
+  position: relative;
+  cursor: pointer;
+}
+.button__text {
+  position: absolute;
+  left: 20%;
+  top: 28%;
+}
+.button__arrow {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+}
+.button:hover {
+  background: rgba(73, 73, 73, 0.38);
+}
+.button:active {
+  background: rgba(167, 166, 166, 0.38);
+}
+/*styling of wave svgs at the bottom*/
+.wave1 {
+  position: absolute;
+  left: 87px;
+  bottom: 0%;
+}
+.wave2 {
+  position: absolute;
+  left: 0px;
+  bottom: 0%;
+}
+
+.signup_page_link {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.go_to_signup_page {
+  color: #027cce;
+  outline: none;
+}
+/*rotate animation for sign up page*/
+.signin_rotate {
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  position: relative;
+}
+/*Styling of signup Page*/
+.signup {
+  transform: rotateY(180deg);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  height: 65%;
+  width: 100%;
+}
+.signup_container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  color: #555454;
+  height: 90%;
+  width: 80%;
+  border-bottom: #000 1px solid;
+}
+.email_input {
+  height: 30px;
+  margin-bottom: 30px;
+}
+.email_input input:focus + label .email__username,
+.email_input input:valid + label .email__username {
+  position: absolute;
+  font-size: 14px;
+  left: 0px;
+  color: #000;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+.email_input input:focus,
+.email_input input:valid {
+  border-bottom: #fff 1px solid;
+}
+.button2 {
+  margin-bottom: 20px;
+  position: relative;
+}
+.signup_container > .password_input {
+  margin-bottom: 30px;
+}
+.signup_container > button > .button__arrow {
+  position: absolute;
+  left: 60%;
+  top: 42%;
+}
+.signin_page_link {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.go_to_signin_page {
+  color: #027cce;
+  outline: none;
+}
+.signup_rotate {
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  position: relative;
+}
